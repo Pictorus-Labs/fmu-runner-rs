@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.5.0 - 2026-10-16
+
+### Changed
+
+- Upgraded `zip` from 0.6 to 8.6, since every `zip` 0.6.x release has been yanked.
+    `zip` is now built with only the `deflate` feature. This is a breaking change because
+    `FmuUnpackError::InvalidArchive` exposes `zip::result::ZipError`.
+- Upgraded `quick-xml` from 0.29 to 0.41 to pick up security fixes.
+
 ## 0.4.4 - 2025-09-22
 
 ### Fixed
